@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca84366ea283e543a05e27eb17a2e23, type: 3}
   m_Name: FurnitureSO
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
+  Name: 
+  Price: 0
+  FBX: {fileID: 100000, guid: f5087e1f9a322b249a1b80e9709ff026, type: 3}

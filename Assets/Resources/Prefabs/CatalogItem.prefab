@@ -1705,7 +1705,7 @@ GameObject:
   - component: {fileID: 1695760977027362432}
   - component: {fileID: 6978592971228438393}
   m_Layer: 5
-  m_Name: CatalogRecipe
+  m_Name: CatalogItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
