@@ -14,19 +14,14 @@ public class EntityMove : MonoBehaviour
 
     public void Move(Vector2 direction)
     {
+        Vector3 forward = Camera.main.transform.forward;
+        Vector3 right = Camera.main.transform.right;
+
         float distance = _entity.Speed * Time.deltaTime;
 
-        Vector3 movement = (transform.forward * direction.y + transform.right * direction.x) * distance;
+        Vector3 movement = (forward * direction.y + right * direction.x) * distance;
         Vector3 newPosition = _rigidbody.position + movement;
+
         _rigidbody.MovePosition(newPosition);
-    }
-
-    public void Rotate(Vector2 inputs)
-    {
-        float yaw = inputs.x * 10f * Time.deltaTime;
-        float pitch = inputs.y * 10f * Time.deltaTime;
-
-        transform.Rotate(Vector3.up, yaw, Space.World);
-        transform.Rotate(Vector3.right, -pitch, Space.Self);
     }
 }
