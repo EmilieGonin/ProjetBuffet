@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d9f600319860cf8428b51c3ba185a8c1
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166740
+  packageName: Transform Colours | CG
+  packageVersion: 1.2.1
+  assetPath: Assets/Carter Games/Transform Colours/Editor/CarterGames.TransformColours.Editor.asmdef
+  uploadId: 530073
