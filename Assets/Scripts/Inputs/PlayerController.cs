@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     {
         _move = GetComponent<EntityMove>();
 
+        GetComponent<MeshRenderer>().enabled = false;
+
         PlayerInputs.OnMove += Move;
     }
 
