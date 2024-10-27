@@ -1,19 +1,46 @@
 using NaughtyAttributes;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxSpawner : MonoBehaviour
 {
-    [SerializeField] private Renderer _renderer;
     [SerializeField] private GameObject _boxPrefab;
+
+    private Coroutine _spawner;
+    private Queue<IngredientSO> _queue = new();
+
+    private void Awake()
+    {
+        //
+    }
+
+    private void OnDestroy()
+    {
+        //
+    }
+
+    private void AddToQueue(IngredientSO ingredient)
+    {
+        _queue.Enqueue(ingredient);
+        _spawner ??= StartCoroutine(SpawnQueue());
+    }
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     private void Spawn()
     {
-        Bounds bounds = _renderer.bounds;
-        float x = Random.Range(bounds.min.x, bounds.max.x);
-        float y = Random.Range(bounds.min.y, bounds.max.y);
-        float z = Random.Range(bounds.min.z, bounds.max.z);
+        Instantiate(_boxPrefab, Utilities.GetRandomPointInBounds(transform), Quaternion.identity);
+    }
 
-        Instantiate(_boxPrefab, new Vector3(x, y, z), Quaternion.identity);
+    private IEnumerator SpawnQueue()
+    {
+        while (_queue.Count > 0)
+        {
+            Spawn();
+            _queue.Dequeue();
+            yield return new WaitForSeconds(1);
+        }
+
+        yield return null;
     }
 }
