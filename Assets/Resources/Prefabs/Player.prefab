@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3762326756586017407}
   - component: {fileID: 7716709630434554548}
   - component: {fileID: 6413403503147987709}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 10472160628079237}
   - component: {fileID: 3212619249818296368}
   - component: {fileID: 4126521600370199092}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FreeLook Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
