@@ -25,8 +25,9 @@ public class CustomersSpawner : MonoBehaviour
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     private void Spawn()
     {
-        int random = UnityEngine.Random.Range(0, _customersPrefabs.Count);
+        _customersCount++;
 
+        int random = UnityEngine.Random.Range(0, _customersPrefabs.Count);
         Instantiate(_customersPrefabs[random], transform.position, Quaternion.identity);
     }
 
