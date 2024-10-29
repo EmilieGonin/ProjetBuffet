@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomersSpawner : MonoBehaviour
+public class CustomersSpawner : Spawner
 {
     [Header("Dependencies")]
     [HorizontalLine(color: EColor.Red)]
@@ -16,11 +16,6 @@ public class CustomersSpawner : MonoBehaviour
     [SerializeField] private int _maxCustomers = 10;
 
     private int _customersCount;
-
-    private void Awake()
-    {
-        GetComponent<Renderer>().enabled = false;
-    }
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     private void Spawn()

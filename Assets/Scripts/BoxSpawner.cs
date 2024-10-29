@@ -3,16 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxSpawner : MonoBehaviour
+public class BoxSpawner : Spawner
 {
+    [Header("Dependencies")]
+    [HorizontalLine(color: EColor.Red)]
     [SerializeField] private GameObject _boxPrefab;
+
+    [Header("Settings")]
+    [HorizontalLine(color: EColor.Blue)]
+    [SerializeField] private float _cooldown = 0.5f;
 
     private Coroutine _spawner;
     private Queue<IngredientSO> _queue = new();
 
-    private void Awake()
+    protected override void Awake()
     {
-        //
+        base.Awake();
     }
 
     private void OnDestroy()
@@ -38,7 +44,7 @@ public class BoxSpawner : MonoBehaviour
         {
             Spawn();
             _queue.Dequeue();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(_cooldown);
         }
 
         yield return null;
