@@ -1,3 +1,5 @@
+using NaughtyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum RecipeDisplay
@@ -10,5 +12,6 @@ public class RecipeSO : BuyableElementSO
 {
     public RecipeDisplay Display;
     public bool IsPortionned => Display is RecipeDisplay.Portion;
-    // Asset portion 3D
+    [ShowIf("IsPortionned")] public GameObject PortionFBX;
+    public List<IngredientSO> Ingredients;
 }

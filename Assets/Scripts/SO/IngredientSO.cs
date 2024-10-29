@@ -2,7 +2,11 @@ using UnityEngine;
 
 public enum IngredientCategory
 {
-    //
+    FruitsAndVegetables,
+    MeatAndFish,
+    Starches,
+    Dairy,
+    Condiments
 }
 
 public enum IngredientStorageType

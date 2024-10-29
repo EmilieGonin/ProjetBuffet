@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d28f577460eea43ae1e655bd68b69a, type: 3}
+  m_Name: Salmon
+  m_EditorClassIdentifier: 
+  Name: Salmon
+  Price: 0
+  FBX: {fileID: 5023823510661070430, guid: 25f246492c453354291394475b55f4c9, type: 3}
+  Category: 1
+  StorageType: 1

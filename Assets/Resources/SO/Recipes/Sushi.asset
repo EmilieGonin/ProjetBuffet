@@ -13,4 +13,10 @@ MonoBehaviour:
   m_Name: Sushi
   m_EditorClassIdentifier: 
   Name: Sushi
-  Price: 10
+  Price: 0
+  FBX: {fileID: 0}
+  Display: 1
+  PortionFBX: {fileID: 0}
+  Ingredients:
+  - {fileID: 11400000, guid: 8d9d4ca74cd7a3f498a96270ff4ec7fb, type: 2}
+  - {fileID: 11400000, guid: e4e97d21c3c9c3540be716acc4e4c4b9, type: 2}
